@@ -4,12 +4,12 @@ import {useState} from "react";
 
 function App () {
     const [number , stateNumber] = useState([
-        {numfirst: 5, numsecond: 11, numthird: 16, numfourth: 23, numfifth: 32}
+        {numfirst: 5, numsecond: 11, numthird: 16, numfourth: 23, numfifth: 32},
     ]);
 
     const ChangeNumber = () => {
         stateNumber([
-            {numfirst: 1, numsecond: 42, numthird: 156, numfourth: 45, numfifth: 2}
+            {numfirst: 1, numsecond: 42, numthird: 156, numfourth: 45, numfifth: 2},
         ]);
     };
 
