@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Number from "./Number/Number.tsx";
+import {useState} from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function App () {
+
+    const [number , stateNumber] = useState([
+        {numeric: 5},
+        {numeric: 11},
+        {numeric: 16},
+        {numeric: 23},
+        {numeric: 32},
+    ]);
+
+    const ChangeNumber = () => {
+        stateNumber([
+            {numeric: 1, },
+            {numeric: 42},
+            {numeric: 160},
+            {numeric: 67},
+            {numeric: 35},
+        ]);
+    };
+
+    return (
+        <div className='App'>
+            <Number numeric={number[0].numeric}></Number>
+            <Number numeric={number[1].numeric}></Number>
+            <Number numeric={number[2].numeric}></Number>
+            <Number numeric={number[3].numeric}></Number>
+            <Number numeric={number[4].numeric}></Number>
+            <button onClick={ChangeNumber}>Change number</button>
+        </div>
+    )
 }
-
 export default App
