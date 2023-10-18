@@ -18,10 +18,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
-  margin: 0 auto;
-  border: 1px solid #808080;
+  padding: 20px;
+  margin: 0 auto 30px auto;
+  border: 3px solid #808080;
   border-radius: 10px;
+  box-shadow: inset 0 0 18px -2px #808080
 }
 
 .numbers-box {
